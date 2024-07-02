@@ -1,0 +1,15 @@
+/home/matheu/RiderProjects/Banco_Csharp/Banco/bin/Debug/net8.0/Banco
+/home/matheu/RiderProjects/Banco_Csharp/Banco/bin/Debug/net8.0/Banco.deps.json
+/home/matheu/RiderProjects/Banco_Csharp/Banco/bin/Debug/net8.0/Banco.runtimeconfig.json
+/home/matheu/RiderProjects/Banco_Csharp/Banco/bin/Debug/net8.0/Banco.dll
+/home/matheu/RiderProjects/Banco_Csharp/Banco/bin/Debug/net8.0/Banco.pdb
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/Banco.GeneratedMSBuildEditorConfig.editorconfig
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/Banco.AssemblyInfoInputs.cache
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/Banco.AssemblyInfo.cs
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/Banco.csproj.CoreCompileInputs.cache
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/Banco.sourcelink.json
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/Banco.dll
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/refint/Banco.dll
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/Banco.pdb
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/Banco.genruntimeconfig.cache
+/home/matheu/RiderProjects/Banco_Csharp/Banco/obj/Debug/net8.0/ref/Banco.dll

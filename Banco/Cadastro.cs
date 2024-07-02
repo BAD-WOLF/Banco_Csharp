@@ -6,21 +6,21 @@ namespace Banco
   {
     internal string NomeTitular;
     internal float CurrentValue;
-    private int _numero_conta;
-    private bool _has_number_count = false;
-    private bool _v_f = false;
+    private int _numeroConta;
+    private bool _hasNumberCount;
+    private bool _vF;
 
     internal int NumeroConta
     {
       get
       {
-        return _numero_conta;
+        return _numeroConta;
       }
       set
       {
-        if (value != _numero_conta)
+        if (value != _numeroConta)
         {
-          this._numero_conta = value;
+          this._numeroConta = value;
         }
       }
     }
@@ -29,47 +29,47 @@ namespace Banco
     {
       get
       {
-        return this._has_number_count;
+        return this._hasNumberCount;
       }
       set
       {
         if (value)
         {
-          this._has_number_count = value;
+          this._hasNumberCount = true;
         }
       }
     }
 
-    internal bool V_F
+    internal bool VF
     {
       get
       {
-        return this._v_f;
+        return this._vF;
       }
       set
       {
         if (value)
         {
-          this._v_f = value;
+          this._vF = true;
         }
       }
     }
 
     // criar conta sem dinheiro
-    internal Cadastro(string nome_titular)
+    internal Cadastro(string nomeTitular)
     {
-      this.sneppet();
-      this.NomeTitular = nome_titular;
+      this.Sneppet();
+      this.NomeTitular = nomeTitular;
     }
 
     // criar conta com dinheiro
-    internal Cadastro(string nome_titular, float current_value) : this(nome_titular)
+    internal Cadastro(string nomeTitular, float currentValue) : this(nomeTitular)
     {
-      this.CurrentValue = current_value;
-      this.V_F = true;
+      this.CurrentValue = currentValue;
+      this.VF = true;
     }
 
-    internal void sneppet()
+    internal void Sneppet()
     {
       this.NumeroConta = new Random().Next(999, 9999);
     }

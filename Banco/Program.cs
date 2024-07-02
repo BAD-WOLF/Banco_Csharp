@@ -3,14 +3,12 @@ using System.Threading;
 using System.Globalization;
 using System.Collections.Generic;
 
-using Banco;
-
 namespace Banco
 {
   public static class Program
   {
     private static Cadastro Cadastrador { get; set; }
-    private static int _set_option;
+    private static int _setOption;
     private static string _titular;
     private static float _preco;
     private static float _saque;
@@ -31,7 +29,7 @@ namespace Banco
       while (true)
       {
         Program.Menu();
-        switch (Program._set_option)
+        switch (Program._setOption)
         {
           case 0:
             Program.Ask(Program.TypeAsk.AskTitularPreco);
@@ -64,20 +62,20 @@ namespace Banco
 
           default:
             Console.WriteLine("opcao invalida!!");
-            Program._set_option = -1;
+            Program._setOption = -1;
             Thread.Sleep(3000); break;
         }
 
         Console.WriteLine("{{ operacao concluida }}");
         Thread.Sleep(3000);
         Console.Clear();
-        continue;
       }
+      // ReSharper disable once FunctionNeverReturns
     }
 
     private static void Menu()
     {
-      if (Program._set_option == -1 || (Program._set_option != 3 && Program._opcoes.Contains(Program._set_option)))
+      if (Program._setOption == -1 || (Program._setOption != 3 && Program._opcoes.Contains(Program._setOption)))
       {
         Console.Clear();
         Console.WriteLine("<< banco do vieira >>\n");
@@ -89,29 +87,29 @@ namespace Banco
         [4] - mostrar dados
         ");
         Console.Write(">> ");
-        Program._set_option = int.Parse(Console.ReadLine());
+        Program._setOption = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
       }
     }
 
-    private static void Ask(Program.TypeAsk? what_ask)
+    private static void Ask(Program.TypeAsk? whatAsk)
     {
-      if (Program._set_option == -1 || (Program._set_option != 3 && Program._opcoes.Contains(Program._set_option)))
+      if (Program._setOption == -1 || (Program._setOption != 3 && Program._opcoes.Contains(Program._setOption)))
       {
-        if (what_ask == Program.TypeAsk.AskTitularPreco && Program._set_option != 2)
+        if (whatAsk == Program.TypeAsk.AskTitularPreco && Program._setOption != 2)
         {
           Console.Write("Nome do titular >> ");
           Program._titular = Console.ReadLine();
         }
         Console.Write("valor a depositar >> ");
-        Program._preco = float.Parse(Console.ReadLine());
+        Program._preco = float.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
       }
 
-      if (what_ask == Program.TypeAsk.AskSaque)
+      if (whatAsk == Program.TypeAsk.AskSaque)
       {
         Console.Write("valor a sacar >> ");
-        Program._saque = float.Parse(Console.ReadLine());
+        Program._saque = float.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
         Cadastrador.CurrentValue -= Program._saque;
-        Program._set_option = -1;
+        Program._setOption = -1;
       }
     }
 
@@ -124,8 +122,8 @@ namespace Banco
       Console.Write("valor inicial: ");
       Console.WriteLine(Program.Cadastrador.CurrentValue.ToString("F2", CultureInfo.InvariantCulture));
       Console.Write("V _ F: ");
-      Console.WriteLine(Program.Cadastrador.V_F);
-      Program._set_option = -1;
+      Console.WriteLine(Program.Cadastrador.VF);
+      Program._setOption = -1;
     }
   }
 }
