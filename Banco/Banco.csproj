@@ -22,4 +22,7 @@
   <PropertyGroup>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".CSharpShellProjData.db" />
+  </ItemGroup>
 </Project>
